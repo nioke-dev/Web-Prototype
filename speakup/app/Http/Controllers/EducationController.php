@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Diary;
+use App\Models\Education;
 use Illuminate\Http\Request;
 
-class DiaryController extends Controller
+class EducationController extends Controller
 {
     public function index()
     {
-        $course = Diary::with('detailUser')->get();
+        $course = Education::all();
         return response()->json($course);
     }
 }
